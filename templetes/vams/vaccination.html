@@ -1,0 +1,472 @@
+{% extends 'vams/base.html' %}
+{% block title %}
+
+{% endblock title %}
+
+{% block content %}
+<section class="home-slider owl-carousel">
+    <div class="slider-item bread-item" style="background-image: url('/static/vams/images/bg_1.jpg');"
+         data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container" data-scrollax-parent="true">
+            <div class="row slider-text align-items-end">
+
+            </div>
+        </div>
+    </div>
+</section>
+<head>
+    <style>
+        .col-md-5{
+                width: 50%;
+                margin: auto;
+                margin-top: 59px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="wpb_wrapper">
+    <div class="wpb_text_column wpb_content_element ">
+        <div class="wpb_wrapper">
+            <h2 style="text-align:center">VACCINATION OFFERED</h2>
+            <p style="text-align:center">The following is a list of vaccines offered by the Vaccination Centre for
+                children, adults and travelers:</p>
+
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 50px;">
+        <div class="row justify-content-center">
+            <table class="table table-striped">
+                <thead>
+                <tr bgcolor="sky blue">
+                    <th scope="col">Generic Name</th>
+                    <th scope="col">Brand Name</th>
+                    <th scope="col">Dose Schedule</th>
+                    <th scope="col">Tariff Including VAT</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for vaccination in vaccination %}
+                <tr>
+                    <th scope="row">{{vaccination.generic_name}}</th>
+                    <td>{{vaccination.brand_name}}</td>
+                    <td>{{vaccination.dose_schedule}}</td>
+                    <td>{{vaccination.tariff_including_vat}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+                                <tr>
+                                    <td width="149"><strong>BCG VACCINE</strong></td>
+                                    <td width="136"><strong>EPI vaccine from Govt.</strong></td>
+                                    <td width="267"><strong>Single dose after birth.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>
+                                    </td>
+                                    <td width="102"><strong>400/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>DPT VACCINE</strong></td>
+                                    <td width="136"><strong>EPI vaccine from Govt. + Private</strong></td>
+                                    <td width="267"><strong>Single dose at 6 weeks of age.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>
+                                    </td>
+                                    <td width="102"><strong>Govt. price=400/-</strong>
+                                        <p></p>
+                                        <p><strong>Private price= 3910/-</strong></p></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>HEPATITIS A VACCINE (CHILD)</strong></td>
+                                    <td width="136"><strong>Prevahav 0.5 ml</strong></td>
+                                    <td width="267"><strong>Single dose from 1 to 15 years of age.</strong>
+                                        <p></p>
+                                        <p><strong>For long term protection a booster dose is recommended after 6 months.</strong></p>
+                                    </td>
+                                    <td width="102"><strong>600+400/-&nbsp; =1000/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>HEPATITIS A VACCINE (ADULT)</strong></td>
+                                    <td width="136"><strong>Prevahav 1 ml</strong></td>
+                                    <td width="267"><strong>For 15 years and above, but dose and a booster dose after 6 months from
+                                        1<sup>st</sup> dose.</strong></td>
+                                    <td width="102"><strong>1000+400/-=1400/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>HEPATITIS B VACCINE (CHILD)</strong></td>
+                                    <td width="136"><strong>Hepa B 0.5 ml</strong></td>
+                                    <td width="267"><strong>1<sup>st</sup> dose: Any day but cannot be administered before 6 weeks of
+                                        age.</strong>
+                                        <p></p>
+                                        <p><strong>2<sup>nd</sup> dose: 1 month from 1<sup>st</sup> dose</strong></p>
+                                        <p><strong>3<sup>rd</sup> dose: 6 months from 1<sup>st</sup> dose</strong></p></td>
+                                    <td width="102"><strong>400+400/-=800/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>HEPATITIS B VACCINE (ADULT)</strong></td>
+                                    <td width="136"><strong>Hepa B 1 ml</strong></td>
+                                    <td width="267"><strong>1<sup>st</sup> dose: any day</strong>
+                                        <p></p>
+                                        <p><strong>2<sup>nd</sup> dose: 1 month from 1<sup>st</sup> dose</strong></p>
+                                        <p><strong>3<sup>rd</sup> dose: 2 months from 1<sup>st</sup> dose</strong></p>
+                                        <p><strong>4<sup>th</sup> dose: 12 months from 1<sup>st</sup> dose</strong></p></td>
+                                    <td width="102"><strong>500+400/-=900/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>MENINGOCOCCAL ACWY</strong></td>
+                                    <td width="136"><strong>Nimenrix/Menactra</strong></td>
+                                    <td width="267"><strong>1<sup>st</sup> dose at any day but cannot be administered before 6 weeks of
+                                        age. Revaccination after every 3 years.</strong></td>
+                                    <td width="102"><strong>3854+400/-=4254/-</strong>
+                                        <p></p>
+                                        <p><strong>3804+400/-=4204/-</strong></p></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>MR VACCINE</strong></td>
+                                    <td width="136"><strong>EPI vaccine from Govt.</strong></td>
+                                    <td width="267"><strong>Only 2 dose 9 months &amp; 15 months.</strong>
+                                        <p></p>
+                                        <p>Early two-dose immunization: 9 months measles vaccine, 15 months</p></td>
+                                    <td width="102"><strong>400/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>TYPHOID VACCINE</strong></td>
+                                    <td width="136"><strong>Vaxphoid</strong></td>
+                                    <td width="267"><strong>Single dose of 0.5 ml from 2 years onwards. Revaccination after every 3
+                                        years. Then continue within 15 years.</strong></td>
+                                    <td width="102"><strong>500+400/-=900/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>RABIES VACCINE</strong></td>
+                                    <td width="136"><strong>Rabix-VC</strong></td>
+                                    <td width="267"><strong>Pose exposure schedule: Each 0.5 ml injection on D0, D3, D7, D14 &amp;
+                                        D28.</strong>
+                                        <p></p>
+                                        <p><strong>Pre exposure schedule: Each 0.5 ml injection on D0, D7 &amp; D21 or D28</strong></p>
+                                    </td>
+                                    <td width="102"><strong>500+400/-=900/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>TETANUS TOXOID</strong></td>
+                                    <td width="136"><strong>Vaxilet</strong></td>
+                                    <td width="267"><strong>For female: After 15 years D0 month, D1 month, D6 months, D12 months &amp;
+                                        D24 months.</strong>
+                                        <p></p>
+                                        <p>2 injections (1 to 2 months apart), followed by a booter (6 to 12 months after 2<sup>nd</sup>
+                                            injection)</p></td>
+                                    <td width="102"><strong>80+400/-= 480/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>YELLOW FEVER VACCINE</strong></td>
+                                    <td width="136"><strong>STAMERIL</strong></td>
+                                    <td width="267"><strong>Adult &amp; children aged 9 months &amp; over: Single dose of 0.5 ml of
+                                        reconstituted vaccine. The vaccine should be given ai least 10 days before entering an endemic
+                                        area. Re-vaccination with one dose of 0.5 ml is recommended every 10 years in persons considered
+                                        to be at risk of exposure.</strong></td>
+                                    <td width="102"><strong>2250+400/-=2650/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>PNEUMONIA VACCINE 23 VALENT (ABOVE 2 YEARS)</strong></td>
+                                    <td width="136"><strong>PNEUMO-23</strong></td>
+                                    <td width="267"><strong>2 to 65 years of age: </strong>
+                                        <p></p>
+                                        <p><strong>Single dose (Every 3 years)</strong></p>
+                                        <p><strong>65 years &amp; above: </strong></p>
+                                        <p><strong>Booster dose (Every 5 years)</strong></p></td>
+                                    <td width="102"><strong>2470+400/-=2870/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>PNEUMOCOCCAL CONJUGATE VACCINE</strong></td>
+                                    <td width="136"><strong>PREVENAR-13</strong></td>
+                                    <td width="267"><strong>For adult: Once in a life.</strong>
+                                        <p></p>
+                                        <p><strong>For child: </strong></p>
+                                        <p><strong>1<sup>st</sup> dose: 6 weeks</strong></p>
+                                        <p><strong>2<sup>nd</sup> dose: 10 weeks</strong></p>
+                                        <p><strong>3<sup>rd</sup> dose: 14 weeks</strong></p>
+                                        <p><strong>Booster dose: 15 months</strong></p></td>
+                                    <td width="102"><strong>5620+400/-=6020/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>CHICKEN-POX</strong></td>
+                                    <td width="136"><strong>VARIVAX</strong></td>
+                                    <td width="267"><strong>1<sup>st</sup> dose: after 1 year</strong>
+                                        <p></p>
+                                        <p><strong>Booster dose: 5 years from 1<sup>st</sup> dose</strong></p></td>
+                                    <td width="102"><strong>8103+400/-=8503/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>DTaP + IPV + Hib + Hepatitis B</strong></td>
+                                    <td width="136"><strong>Under 8 months Govt. &amp; Above * months Private (Hexaxim)</strong></td>
+                                    <td width="267"><strong>1<sup>st</sup> dose: At age of 2 months. </strong>
+                                        <p></p>
+                                        <p><strong>2<sup>nd</sup> dose: 1 month from 1<sup>st</sup> dose.</strong></p>
+                                        <p><strong>3<sup>rd</sup> dose: 2 months from 1<sup>st</sup> dose.</strong></p>
+                                        <p><strong>4<sup>th</sup> dose: 6 months from 3<sup>rd</sup> dose, must be completed by the age
+                                            of 18 months.</strong></p></td>
+                                    <td width="102"><strong>Govt price= 400/- &amp; Private price= 3510+400/-=3910/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>ROTAVIRUS VACCINE</strong></td>
+                                    <td width="136"><strong>ROTATAQ</strong></td>
+                                    <td width="267"><strong>1<sup>st</sup> dose: Any day but cannot be administered before 6weeks of
+                                        age.</strong>
+                                        <p></p>
+                                        <p><strong>2<sup>nd</sup> dose: 4 weeks from 1<sup>st</sup> dose.</strong></p>
+                                        <p><strong>3<sup>rd</sup> dose: 4weeks from 2<sup>nd</sup> dose, must be completed by 8 months
+                                            of age.</strong></p></td>
+                                    <td width="102"><strong>2134+400/-=2534/-</strong>
+                                        <p></p>
+                                        <p><strong>&nbsp;</strong></p></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>VACCINE AGAINST CHOLERA ETEC-DIARRHOEA</strong></td>
+                                    <td width="136"><strong>DUKORAL</strong></td>
+                                    <td width="267"><strong>2 doses for adults &amp; children from 6 years of age. Children 2 to 6 years
+                                        of age should receive 3 doses. Doses are to be administered at intervals of at least one week.
+                                        If more than 6 weeks have elapsed between doses, the primary immunization course should be
+                                        restarted. </strong>
+                                        <p></p>
+                                        <p><strong>6 years above: 1<sup>st</sup> dose: Any day</strong></p>
+                                        <p><strong>2<sup>nd</sup> dose: 1 year from 1<sup>st</sup> dose</strong></p>
+                                        <p><strong>3<sup>rd</sup> dose: 2 years from 2<sup>nd</sup> dose</strong></p></td>
+                                    <td width="102"><strong>1900+400/-=2300/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>HUMAN PAPILOMA VIRUS VACCINE</strong></td>
+                                    <td width="136"><strong>GARDASIL</strong></td>
+                                    <td width="267"><strong>For female from 10 to 50 years of age.</strong>
+                                        <p></p>
+                                        <p><strong>1<sup>st</sup> dose: Any day after 10 years of age</strong></p>
+                                        <p><strong>2<sup>nd</sup> dose: 1 month from 1<sup>st</sup> dose</strong></p>
+                                        <p><strong>3<sup>rd</sup> dose: 6 months from 1<sup>st</sup> dose</strong></p></td>
+                                    <td width="102"><strong>5887+400/-=6287/-</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="149"><strong>INFLUENZA VACCINE</strong></td>
+                                    <td width="136"><strong>INFLUVAX</strong></td>
+                                    <td width="267"><strong>Adults &amp; children from 36 months of age: Dosage of 0.5 ml children from
+                                        6 months to 35 months: Dosage of 0.25 ml or 0.5 ml. For children who have not previously been
+                                        vaccinated, a 2<sup>nd</sup> dose should be given after an interval of at least 4 weeks.
+                                    </strong></td>
+                                    <td width="102"><strong>700+400/-=1100/-</strong></td>
+                                </tr>
+
+                            </table>
+
+                <div class="column4">
+                    <h3>Vaccination Program of VaxCare</h3>
+                    <p>Vaccines are very important for your child; it protects your child against various dreaded
+                        diseases
+                        like tetanus, diphtheria, pertussis (whooping cough), polio, measles, hepatitis B, haemophilus
+                        influenza type b (which causes some meningitis and pneumonia), yellow fever, tuberculosis, etc.
+                        Apollo Vaccination Centre offers a range of vaccinations not only for your child, but also for
+                        adults and travellers. Patients are immunized at our Centre as per the Extended Program of
+                        Immunization (EPI) of World Health Organization (WHO) protocols. </p>
+                    <p>
+
+                    </p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th class="first"><strong>Age</strong></th>
+                            <th>Vaccine</th>
+
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">Birth</td>
+                            <td>BCG, Oral Polio (first dose)</td>
+
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">6 weeks</td>
+                            <td>Penta (first dose), Oral Polio (second dose),</td>
+
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">10 weeks</td>
+                            <td>Penta (second dose), Oral Polio (third dose)</td>
+
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">14 weeks</td>
+                            <td>Penta (third dose), Oral Polio (fourth dose),</td>
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">9 months</td>
+                            <td>MR (Rubella)</td>
+
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">1 year</td>
+                            <td>Varilix</td>
+
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">15-18 months</td>
+                            <td>Measles, Oral Polio (fifth dose)</td>
+
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">2 years</td>
+                            <td>Typhoid</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>(The schedule is recommended by Bangladesh Paediatric Association.) </p> <br>
+
+                    <h3>TT (Tetanus Toxoid)</h3>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th class="first"><strong>Age</strong></th>
+                            <th>Vaccine/Doses</th>
+
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">After 15 Yrs (anytime)</td>
+                            <td>TT (First dose)</td>
+
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">After 28 days from the first dose</td>
+                            <td>TT (Second dose)</td>
+
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">After 6 months from 2nd dose</td>
+                            <td>TT (Third dose)</td>
+
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">After 1 yr from the third dose</td>
+                            <td>TT (Fourth dose)</td>
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">After 1 yr from the fourth dose</td>
+                            <td>TT (Fifth dose)</td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <p><br>VaxCare also provide non-govt. vaccination program on payment basis. Which are: </p>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th class="first"><strong>Vaccine</strong></th>
+                            <th>Age</th>
+                            <th>First dose</th>
+                            <th>Second dose</th>
+                            <th>Third dose</th>
+                            <th>Fourth dose</th>
+                            <th>Price</th>
+
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">Engerix B</td>
+                            <td>Any Age</td>
+                            <td>Anyday</td>
+                            <td>1 month from 1st dose</td>
+                            <td>6 months from 1st dose</td>
+                            <td>--</td>
+
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">Rotarix</td>
+                            <td>From 6 weeks</td>
+                            <td>Anyday</td>
+                            <td>4 weeks from 1st dose (Must be completed by the age of 6 months.)</td>
+                            <td>--</td>
+                            <td>--</td>
+
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">Synflorix</td>
+                            <td>6 weeks - 6 months</td>
+                            <td>Anyday</td>
+                            <td>1 month after 1st dose</td>
+                            <td>1 month after 2nd dose</td>
+                            <td>6 month after 3rd dose</td>
+
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">Infanrix</td>
+                            <td>From 2 months</td>
+                            <td> Anyday</td>
+                            <td>1 month from 1st dose</td>
+                            <td>1 month from 2nd dose</td>
+                            <td>6 months from 3rd dose (Should be completed by the age of 18)</td>
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">Hiberix</td>
+                            <td>From 12 months - 5 yrs (Previously unvaccinated)</td>
+                            <td>Anyday</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">Tritanrix</td>
+                            <td>From 6 weeks</td>
+                            <td>Anyday</td>
+                            <td>4-6 weeks from 1st dose</td>
+                            <td>4-6 weeks from 2nd dose</td>
+                            <td>At 2 yrs of age</td>
+
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">Priorix</td>
+                            <td>From 9 months</td>
+                            <td>Anyday</td>
+                            <td>3 months from 1st dose</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">Havrix</td>
+                            <td>From 12 months</td>
+                            <td>Anyday</td>
+                            <td>6-12 months from 1st dose</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">Varilrix</td>
+                            <td>From 9 months</td>
+                            <td>Anyday</td>
+                            <td>6 weeks from 1st dose</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">Cervarix</td>
+                            <td>From 9 yrs</td>
+                            <td>Anyday</td>
+                            <td>1 months from 1st dose</td>
+                            <td>6 months from 1st dose*</td>
+                            <td>--</td>
+                        </tr>
+                        <tr class="row-a">
+                            <td class="first">Mencevax ACWY</td>
+                            <td>From 2 yrs</td>
+                            <td>Anyday</td>
+                            <td>Revaccination after every 3 yrs</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr class="row-b">
+                            <td class="first">Fluarix</td>
+                            <td>From 6 month</td>
+                            <td>Anyday</td>
+                            <td>Revaccination after every 3 yrs</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+ {% endblock content %}
